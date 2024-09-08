@@ -48,7 +48,7 @@ RUN chown -R www-data:www-data /var/www/html \
 
 
     # Copy entrypoint script
-COPY conf/00-laravel-deploy.sh /usr/local/bin/00-laravel-deploy.sh
+COPY scripts/00-laravel-deploy.sh /usr/local/bin/00-laravel-deploy.sh
 RUN chmod +x /usr/local/bin/00-laravel-deploy.sh
 
 ENTRYPOINT ["00-laravel-deploy.sh"]
